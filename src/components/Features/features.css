@@ -1,0 +1,7 @@
+.features {
+    @apply py-24 text-center;
+}
+
+.feature {
+    @apply text-2xl mb-6 font-medium;
+}

@@ -1,0 +1,11 @@
+.cta {
+    @apply h-[400px] flex flex-col justify-center items-center bg-gradient-to-t from-orange-600 to-orange-400 text-white;
+}
+
+.cta h2 {
+    @apply text-4xl font-bold mb-6;
+}
+
+.cta button {
+    @apply bg-white text-black px-6 py-3 rounded-full;
+}
