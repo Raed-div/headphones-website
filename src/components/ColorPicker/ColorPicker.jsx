@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import { useState, useRef } from "react";
+import ProductCarousel from "./ProductCarousel";
+import ColorButtons from "./ColorButtons";
 
 const products = [
   {
@@ -27,27 +28,8 @@ const colorMap = {
 };
 
 const ColorPicker = () => {
-  const [centerIndex, setCenterIndex] = useState(2);
+  const [centerIndex, setCenterIndex] = useState(1);
   const imgRefs = useRef([]);
-
-  useEffect(() => {
-    imgRefs.current.forEach((img, index) => {
-      if (img) {
-        const isCenter = index === centerIndex;
-        gsap.to(img, {
-          scale: isCenter ? 1.1 : 0.9,
-          opacity: isCenter ? 1 : 0.6,
-          duration: 0.5,
-          ease: "power2.out",
-        });
-      }
-    });
-  }, [centerIndex]);
-
-  const handleColorClick = (color) => {
-    const index = products.findIndex((p) => p.color === color);
-    if (index !== -1) setCenterIndex(index);
-  };
 
   return (
     <section className="py-16 px-6">
@@ -56,42 +38,23 @@ const ColorPicker = () => {
           Your Style. Your Sound.
         </h2>
 
-        {/* عرض الصور الثلاثة جنب بعض */}
-        <div className="mt-12 flex items-center justify-center gap-4 md:gap-8">
-          {products.map((prod, index) => (
-            <div
-              key={prod.color}
-              className="transition-all duration-300 cursor-pointer"
-              onClick={() => setCenterIndex(index)}
-            >
-              <img
-                ref={(el) => (imgRefs.current[index] = el)}
-                src={prod.image}
-                alt={`${prod.color} headphones`}
-                className="w-32 md:w-48 h-auto rounded-2xl"
-              />
-            </div>
-          ))}
-        </div>
+        <ProductCarousel
+          products={products}
+          centerIndex={centerIndex}
+          setCenterIndex={setCenterIndex}
+          imgRefs={imgRefs}
+        />
 
-        {/* مجموعة الألوان أسفل الصور */}
-        <div className="flex justify-center gap-4 md:gap-6 mt-8">
-          {colors.map((color) => (
-            <button
-              key={color}
-              className={`w-8 h-8 rounded-full border-2 transition-all duration-300 ${
-                centerIndex !== null && products[centerIndex].color === color
-                  ? "border-blue-500 scale-110"
-                  : "border-gray-300"
-              }`}
-              style={{ backgroundColor: colorMap[color] }}
-              onClick={() => handleColorClick(color)}
-            />
-          ))}
-        </div>
+        <ColorButtons
+          colors={colors}
+          colorMap={colorMap}
+          products={products}
+          centerIndex={centerIndex}
+          setCenterIndex={setCenterIndex}
+        />
 
         <p className="text-sm text-[#6B6560] mt-4">
-          Click a color or a headphone to focus it.
+          Drag, click a color, or a headphone to focus it.
         </p>
       </div>
     </section>

@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./components/Navbar/HeroSection";
 import ColorPicker from "./components/ColorPicker/ColorPicker";
-
-
 export default function App() {
   return (
     <>
-      <Navbar/>
+      <HeroSection/>
       <ColorPicker/>
     </>
   );
