@@ -16,29 +16,99 @@ const Header = ({ setMenuOpen }) => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-5 h-5 text-[#2D2A26]"
+            className="w-5 h-5 text-[#52483E]"
           >
             <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
           </svg>
-          <span className="font-semibold text-[#2D2A26]">Resonance</span>
+          <span className="font-semibold text-[20px] sm:text-[20px] text-[#52483E]">
+            Resonance
+          </span>
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8">
-          <a className="text-sm text-[#2D2A26] hover:opacity-70 cursor-pointer">
+          <button
+            type="button"
+            className="
+              inline-block
+              text-[13px]   
+              sm:text-[15px] 
+              md:text-[16px] 
+              lg:text-[18px]
+              font-normal
+              text-transparent
+              bg-clip-text
+              bg-gradient-to-r
+              from-[#1A1A1A]
+              via-[#444444]
+              to-[#666666]
+              cursor-pointer
+              transition-colors
+              duration-300
+            "
+          >
             Home
-          </a>
-          <a className="text-sm text-[#2D2A26] hover:opacity-70 cursor-pointer">
-            Tech Specs
-          </a>
-          <button className="bg-[#2D2A26] text-white px-6 py-2 rounded-full text-sm">
-            Compare
           </button>
+
+          <button
+            type="button"
+            className="
+              inline-block
+              text-[13px]
+              sm:text-[15px]
+              md:text-[16px]
+              lg:text-[18px]
+              font-normal
+              text-transparent
+              bg-clip-text
+              bg-gradient-to-r
+              from-[#1A1A1A]
+              via-[#444444]
+              to-[#666666]
+              cursor-pointer
+              transition-colors
+              duration-300
+            "
+          >
+            Tech Specs
+          </button>
+
+          <div className="relative inline-block rounded-[24px] p-[1px] bg-gradient-to-r from-[#000000] to-[#8B8782]">
+            <button
+              type="button"
+              className="
+                w-full
+                px-6
+                py-2
+                text-[16px]
+                font-normal
+                text-white
+                rounded-[24px]
+                bg-gradient-to-r
+                from-[#52483E]
+                to-[#8B8782]
+                focus:outline-none
+                cursor-pointer
+              "
+            >
+              Compare
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Button */}
         <button
-          className="md:hidden text-2xl text-[#2D2A26]"
+          type="button"
+          className="
+            md:hidden
+            text-[32px] 
+            border-2         
+            border-transparent
+            rounded-lg       
+            cursor-pointer
+            focus:outline-none
+            text-[#000000]
+          "
           onClick={() => setMenuOpen(true)}
         >
           ☰
