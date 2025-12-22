@@ -2,29 +2,24 @@ import { useState, useRef } from "react";
 import ProductCarousel from "./ProductCarousel";
 import ColorButtons from "./ColorButtons";
 
+// استيراد الصور من المجلد المحلي
+import beigeImg from "../../assets/images/beige.png";
+import greenImg from "../../assets/images/green.png";
+import redImg from "../../assets/images/red.png";
+
+// المنتجات
 const products = [
-  {
-    color: "gold",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/golden-yellow-wireless-headphones-product-UN1Nw25CPWFhMkP09KJ9oU7yVRojw2.jpg",
-  },
-  {
-    color: "sage",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/sage-green-wireless-headphones-product-thzJpKYrUw4cjpqOIPjMxcYHFDdRnK.jpg",
-  },
-  {
-    color: "rose",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/attachments/gen-images/public/rose-pink-wireless-headphones-product-jyQttYZQZGvaxgO7cYLbRJF3orNfSV.jpg",
-  },
+  { color: "beige", image: beigeImg },
+  { color: "green", image: greenImg },
+  { color: "red", image: redImg },
 ];
 
-const colors = ["gold", "sage", "rose"];
+// الألوان والألوان المستخدمة في الخريطة
+const colors = ["beige", "green", "red"];
 const colorMap = {
-  gold: "rgb(196, 169, 98)",
-  sage: "rgb(139, 154, 109)",
-  rose: "rgb(158, 90, 90)",
+  beige: "rgb(196, 169, 98)",
+  green: "rgb(139, 154, 109)",
+  red: "rgb(158, 90, 90)",
 };
 
 const ColorPicker = () => {
@@ -34,9 +29,12 @@ const ColorPicker = () => {
   return (
     <section className="py-16 px-6">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#2D2A26] mb-6">
+        <h2 className="text-4xl sm:text-5xl md:text-[56px] font-semibold text-[#52483E] mb-6">
           Your Style. Your Sound.
         </h2>
+        <p className="font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
+          Studio-grade acoustics that dissolve distractions and awaken clarity.
+        </p>
 
         <ProductCarousel
           products={products}
@@ -53,8 +51,8 @@ const ColorPicker = () => {
           setCenterIndex={setCenterIndex}
         />
 
-        <p className="text-sm text-[#6B6560] mt-4">
-          Drag, click a color, or a headphone to focus it.
+        <p className="font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
+          Choose a color that fits your flow.
         </p>
       </div>
     </section>
