@@ -27,7 +27,7 @@ const ColorPicker = () => {
   const imgRefs = useRef([]);
 
   return (
-    <section className="py-16 px-6">
+    <section className="py-16 px-6 bg-[#F5F5F5]">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl md:text-[56px] font-semibold text-[#52483E] mb-6">
           Your Style. Your Sound.
