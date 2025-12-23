@@ -11,18 +11,27 @@ const ColorButtons = ({
   };
 
   return (
-    <div className="flex justify-center gap-4 md:gap-6 mt-8">
+    <div className="flex justify-center gap-5 mt-8">
       {colors.map((color) => {
         const isActive = products[centerIndex]?.color === color;
 
         return (
           <button
             key={color}
-            className={`w-8 h-8 rounded-full border-2 transition-all duration-300 ${
-              isActive ? "border-blue-500 scale-110" : "border-gray-300"
-            }`}
+            className={`
+              w-10 h-10 
+              rounded-full 
+              transition-all 
+              duration-300
+              hover:scale-110
+              ${isActive 
+                ? "ring-2 ring-offset-2 ring-[#52483E] scale-110" 
+                : "hover:ring-2 hover:ring-offset-2 hover:ring-gray-400"
+              }
+            `}
             style={{ backgroundColor: colorMap[color] }}
             onClick={() => handleColorClick(color)}
+            aria-label={`Select ${color} color`}
           />
         );
       })}

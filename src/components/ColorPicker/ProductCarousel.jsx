@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from "react";
+import { useEffect, useCallback, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 const ProductCarousel = ({
@@ -8,6 +8,17 @@ const ProductCarousel = ({
   imgRefs,
 }) => {
   const dragData = useRef({ startX: 0, currentX: 0, isDragging: false });
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const updateImages = useCallback(
     (index) => {
@@ -19,22 +30,39 @@ const ProductCarousel = ({
 
         const isCenter = offset === 0;
 
-        gsap.to(img, {
-          x: offset * 120,
-          scale: isCenter ? 1.2 : 0.9,
-          opacity: isCenter ? 1 : 0.6,
-          zIndex: isCenter ? 10 : 1,
-          duration: 0.5,
-          ease: "power2.out",
-        });
+        if (isMobile) {
+          // On mobile: only show center image, hide others
+          gsap.to(img, {
+            x: 0,
+            scale: isCenter ? 1 : 0,
+            opacity: isCenter ? 1 : 0,
+            filter: 'blur(0px)',
+            zIndex: isCenter ? 10 : 1,
+            duration: 0.4,
+            ease: "power2.out",
+          });
+        } else {
+          // On desktop: show carousel with blur
+          const isVisible = Math.abs(offset) <= 1;
+          gsap.to(img, {
+            x: offset * 350,
+            scale: isCenter ? 1 : 0.7,
+            opacity: isCenter ? 1 : 0.4,
+            filter: isCenter ? 'blur(0px)' : 'blur(4px)',
+            zIndex: isCenter ? 10 : 1,
+            duration: 0.5,
+            ease: "power2.out",
+            visibility: isVisible ? 'visible' : 'hidden',
+          });
+        }
       });
     },
-    [imgRefs, products.length]
+    [imgRefs, products.length, isMobile]
   );
 
   useEffect(() => {
     updateImages(centerIndex);
-  }, [centerIndex, updateImages]);
+  }, [centerIndex, updateImages, isMobile]);
 
   const handleDragStart = (e) => {
     dragData.current.isDragging = true;
@@ -68,7 +96,7 @@ const ProductCarousel = ({
 
   return (
     <div
-      className="mt-12 relative flex items-center justify-center h-64 md:h-80 overflow-hidden"
+      className="relative flex items-center justify-center h-[400px] sm:h-[400px] md:h-[450px] overflow-hidden select-none"
       onMouseDown={handleDragStart}
       onMouseMove={handleDragMove}
       onMouseUp={handleDragEnd}
@@ -83,8 +111,10 @@ const ProductCarousel = ({
           ref={(el) => (imgRefs.current[index] = el)}
           src={prod.image}
           alt={`${prod.color} headphones`}
-          className="absolute w-32 md:w-48 h-auto rounded-2xl cursor-pointer"
+          className="absolute w-[75vw] sm:w-[60vw] md:w-[50vw] lg:w-[400px] h-auto cursor-pointer transition-all"
+          style={{ willChange: 'transform, opacity, filter' }}
           onClick={() => setCenterIndex(index)}
+          draggable={false}
         />
       ))}
     </div>
@@ -92,3 +122,4 @@ const ProductCarousel = ({
 };
 
 export default ProductCarousel;
+

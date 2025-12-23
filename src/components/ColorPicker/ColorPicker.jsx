@@ -17,9 +17,9 @@ const products = [
 // الألوان والألوان المستخدمة في الخريطة
 const colors = ["beige", "green", "red"];
 const colorMap = {
-  beige: "rgb(196, 169, 98)",
-  green: "rgb(139, 154, 109)",
-  red: "rgb(158, 90, 90)",
+  beige: "#D4A84B",
+  green: "#9AA26D",
+  red: "#8B4B4B",
 };
 
 const ColorPicker = () => {
@@ -27,15 +27,22 @@ const ColorPicker = () => {
   const imgRefs = useRef([]);
 
   return (
-    <section className="pb-16 px-6 bg-[#F5F5F5]">
+    <section className="py-16 px-6 bg-[#ECEAEA]">
       <div className="container mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold text-[#52483E] mb-6">
-          Your Style. Your Sound.
-        </h2>
-        <p class="font-normal text-base sm:text-lg md:text-xl lg:text-[24px] text-[#8B8782]">
-          Studio-grade acoustics that dissolve distractions and awaken clarity.
-        </p>
+        {/* Header Section */}
+        <div className="max-w-3xl mx-auto mb-8">
+          <h2 
+            className="font-bold text-[#3D3D3D] mb-4"
+            style={{ fontSize: '48px' }}
+          >
+            Your Style. Your Sound.
+          </h2>
+          <p className="font-normal text-[18px] text-[#8B8782]">
+            Studio-grade acoustics that dissolve distractions and awaken clarity.
+          </p>
+        </div>
 
+        {/* Product Carousel */}
         <ProductCarousel
           products={products}
           centerIndex={centerIndex}
@@ -43,6 +50,7 @@ const ColorPicker = () => {
           imgRefs={imgRefs}
         />
 
+        {/* Color Buttons */}
         <ColorButtons
           colors={colors}
           colorMap={colorMap}
@@ -51,7 +59,8 @@ const ColorPicker = () => {
           setCenterIndex={setCenterIndex}
         />
 
-        <p className="mt-6 font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
+        {/* Bottom Text */}
+        <p className="mt-6 font-normal text-[18px] text-[#8B8782]">
           Choose a color that fits your flow.
         </p>
       </div>
