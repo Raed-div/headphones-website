@@ -27,12 +27,12 @@ const ColorPicker = () => {
   const imgRefs = useRef([]);
 
   return (
-    <section className="py-16 px-6 bg-[#F5F5F5]">
+    <section className="pb-16 px-6 bg-[#F5F5F5]">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-[56px] font-semibold text-[#52483E] mb-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold text-[#52483E] mb-6">
           Your Style. Your Sound.
         </h2>
-        <p className="font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
+        <p class="font-normal text-base sm:text-lg md:text-xl lg:text-[24px] text-[#8B8782]">
           Studio-grade acoustics that dissolve distractions and awaken clarity.
         </p>
 
@@ -51,7 +51,7 @@ const ColorPicker = () => {
           setCenterIndex={setCenterIndex}
         />
 
-        <p className="font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
+        <p className="mt-6 font-normal text-[20px] sm:text-[24px] text-[#8B8782]">
           Choose a color that fits your flow.
         </p>
       </div>

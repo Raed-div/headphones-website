@@ -17,14 +17,6 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     itemsRef,
   });
 
-  // Render backdrop only if menu was opened at least once or is open (controlled by GSAP opacity usually,
-  // but here we use conditional rendering with animation handling in hook.
-  // To keep GSAP exit animations working, we usually keep it mounted or use AnimatePresence.
-  // Based on your original code, you used conditional rendering `{menuOpen && ...}` for backdrop
-  // but kept the sheet mounted usually.
-  // *Correction based on original code logic*: The original code rendered backdrop conditionally
-  // but the sheet was always in DOM just translated.
-
   return (
     <>
       {/* Backdrop */}
@@ -52,20 +44,20 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-6" />
 
         {["Home", "Tech Specs"].map((item, i) => (
-          <a
+          <button
             key={item}
             ref={(el) => (itemsRef.current[i] = el)}
             onClick={() => setMenuOpen(false)}
-            className="text-2xl text-[#2D2A26] cursor-pointer"
+            className="text-2xl text-[#52483E] cursor-pointer"
           >
             {item}
-          </a>
+          </button>
         ))}
 
         <button
           ref={(el) => (itemsRef.current[2] = el)}
           onClick={() => setMenuOpen(false)}
-          className="mt-auto bg-[#2D2A26] text-white py-4 rounded-full text-lg"
+          className="mt-auto bg-[#52483E] text-white py-4 rounded-full text-lg"
         >
           Compare
         </button>
