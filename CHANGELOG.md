@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.1.0] - 2024-12-24
+
+### ⚡ Performance Optimization
+- **Lighthouse Score**: Improved from 52% to 68-80%
+- **GSAP Optimization**: Implemented `gsap.context()` and `useLayoutEffect` to fix forced reflows (~133ms)
+- **LCP Optimization**: Added `fetchpriority="high"` and explicit dimensions to hero images
+- **Asset Optimization**:
+  - Implemented non-blocking Google Fonts loading
+  - Configured long-term caching (`Cache-Control`) via `_headers` for Netlify
+  - Reduced font weights (removed 100/200/300/800/900)
+- **Responsive Images**: Added `width/height` attributes to prevent CLS
+
+### 🎨 Color System Unification
+- **Standardized Palette**: Unified all colors across pages (Home, TechSpecs, Compare)
+- **Updated Colors**:
+  - Headings: `#52483E` (Rich Brown)
+  - Secondary Text: `#8B8782` (Light Brown)
+  - Feature Labels: `#666666` (Soft Gray)
+  - Icons: `#D2CDC6` (Beige)
+- **Consistent Styling**: Aligned `ColorPicker` typography with `HorizontalGallery`
+
+### ♿ Accessibility & Quality
+- **Interactives**: Converted invalid anchors to Buttons/Links
+- **Navigation**: Fixed routing links in Footer
+- **Linting**: Resolved all ESLint warnings (hooks deps, aria-roles)
+
+---
+
 ## [1.0.0] - 2024-12-24
 
 ### 🎉 Initial Release

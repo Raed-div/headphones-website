@@ -13,17 +13,19 @@ This document outlines the harmonious color system applied across all pages of t
 | Color | Hex Code | Usage | Pages |
 |-------|----------|-------|-------|
 | **Warm Beige** | `#F5F1EC` | Main background | Home (sections), TechSpecs, Compare |
-| **Light Gray** | `#F5F5F5` | Section background | Home (ColorPicker section) |
+| **Light Gray** | `#F5F5F5` | Section background | Home (ColorPicker section), Compare Cards |
 | **Soft Beige** | `#D2CDC6` | Gradient top | Home (Hero), Footer (gradient bottom) |
 
 ### Text Colors
 
 | Color | Hex Code | Usage |
 |-------|----------|-------|
-| **Dark Gray** | `#3E3E3E` | Primary headings |
-| **Medium Gray** | `#4A4A4A` | Product names, secondary text |
-| **Brown** | `#52483E` | Logo, links, emphasis |
-| **Light Brown** | `#8B8782` | Secondary text, icons |
+| **Dark Gray** | `#3E3E3E` | Primary headings (Home, General) |
+| **Rich Brown** | `#52483E` | Headings (TechSpecs, Compare), Links, Emphasis |
+| **Medium Gray** | `#4A4A4A` | Secondary headings, general text |
+| **Soft Gray** | `#666666` | Feature labels (Compare cards) |
+| **Light Brown** | `#8B8782` | Secondary text, values, icons, prices |
+| **Beige Icon** | `#D2CDC6` | SVG Icons (Compare cards) |
 
 ### Accent Colors
 
@@ -69,9 +71,9 @@ background: #F5F1EC
 - Matches overall site aesthetic
 
 #### Text Colors
-- **Headings:** `#1A1A1A` (very dark gray)
-- **Body text:** `#52483E` (brown)
-- **Labels:** `text-gray-600`
+- **Headings (H2, H3):** `#52483E` (Rich Brown)
+- **Body text (Labor):** `#52483E` (Rich Brown)
+- **Values (Right span):** `#8B8782` (Light Brown)
 
 ---
 
@@ -84,19 +86,17 @@ background: #F5F1EC
 - Consistent with other pages
 - Professional, clean appearance
 
-#### Card Background
-```css
-background: white (#FFFFFF)
-```
-- Contrast against page background
-- Clear product separation
+#### Page Header
+- **Title:** `#52483E`
+- **Subtitle:** `#8B8782`
 
-#### Product Image Container
-```css
-background: #F5F5F5
-```
-- Subtle gray to frame images
-- Unified with Home page
+#### Card Styling
+- **Card Background:** White (`#FFFFFF`)
+- **Image Container:** `#F5F5F5`
+- **Product Name:** `#52483E`
+- **Price:** `#8B8782`
+- **Feature Labels (e.g., R1 Chip):** `#666666`
+- **Icons (SVG):** `#D2CDC6`
 
 ---
 
@@ -147,8 +147,8 @@ background: transparent
 
 ### Purpose
 - **Warm tones** (#F5F1EC, #D2CDC6): Welcoming, premium
-- **Gray tones** (#F5F5F5, #3E3E3E): Professional, clean
-- **Brown accents** (#52483E): Sophistication, brand identity
+- **Gray tones** (#F5F5F5, #3E3E3E, #666666): Professional, clean
+- **Brown accents** (#52483E, #8B8782): Sophistication, brand identity
 
 ---
 
@@ -178,9 +178,10 @@ from-[#F5F5F5] to-[#D2CDC6]
 |-------|-----------|-------------|
 | `#F5F1EC` | ★★★★★ | Page backgrounds |
 | `#F5F5F5` | ★★★★☆ | Sections, containers |
-| `#D2CDC6` | ★★★☆☆ | Gradients |
-| `#52483E` | ★★★★☆ | Text, accents |
-| `#3E3E3E` | ★★★☆☆ | Headings |
+| `#D2CDC6` | ★★★☆☆ | Gradients, Icons |
+| `#52483E` | ★★★★★ | Text, accents, Headers |
+| `#8B8782` | ★★★★☆ | Secondary text, values |
+| `#666666` | ★★★☆☆ | Feature labels |
 
 ---
 
@@ -193,6 +194,7 @@ All text/background combinations meet WCAG AA standards:
 - `#3E3E3E` on `#F5F1EC`: ✅ 8.5:1 (AAA)
 - `#52483E` on `#F5F5F5`: ✅ 7.2:1 (AAA)
 - `#FFFFFF` on `#52483E`: ✅ 12.1:1 (AAA)
+- `#666666` on `#FFFFFF`: ✅ 5.7:1 (AA)
 
 ---
 
@@ -212,8 +214,10 @@ bg-gradient-to-b from-[#F5F5F5] to-[#D2CDC6]
 
 // Text
 text-[#3E3E3E]  // Dark headings
-text-[#52483E]  // Brown text
-text-[#8B8782]  // Light brown
+text-[#52483E]  // Rich Brown headings
+text-[#8B8782]  // Light Brown text
+text-[#666666]  // Soft Gray text
+text-[#D2CDC6]  // Icon color
 ```
 
 ### Opacity Variations
@@ -231,7 +235,10 @@ bg-white/95         // Alternatives
 
 **Creating a card?** Use `bg-white` with `#F5F5F5` for inner containers
 
-**Adding text?** Use `#3E3E3E` for headings, `#52483E` for body
+**Adding text?**
+- Headings: `#52483E` (TechSpecs/Compare) or `#3E3E3E` (Home)
+- Body/Values: `#8B8782`
+- Labels: `#666666`
 
 **Gradient needed?** Follow the Hero/Footer pattern
 
@@ -247,5 +254,5 @@ bg-white/95         // Alternatives
 
 ---
 
-**Last Updated:** December 2024  
-**Maintained by:** Raed (@Raed-div)
+**Last Updated:** December 2024
+**Maintained by:** Development Team
