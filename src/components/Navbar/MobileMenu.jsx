@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { useLockBodyScroll } from "../../hooks/useLockBodyScroll";
 import { useCloseOnResize } from "../../hooks/useCloseOnResize";
 import { useBottomSheetAnimation } from "../../hooks/useBottomSheetAnimation";
@@ -16,6 +17,11 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     backdropRef,
     itemsRef,
   });
+
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Tech Specs", path: "/tech-specs" }
+  ];
 
   return (
     <>
@@ -43,15 +49,16 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-6" />
 
-        {["Home", "Tech Specs"].map((item, i) => (
-          <button
-            key={item}
+        {menuItems.map((item, i) => (
+          <Link
+            key={item.name}
+            to={item.path}
             ref={(el) => (itemsRef.current[i] = el)}
             onClick={() => setMenuOpen(false)}
-            className="text-2xl text-[#52483E] cursor-pointer"
+            className="text-2xl text-[#52483E] cursor-pointer hover:text-[#8B8782] transition-colors"
           >
-            {item}
-          </button>
+            {item.name}
+          </Link>
         ))}
 
         <button
