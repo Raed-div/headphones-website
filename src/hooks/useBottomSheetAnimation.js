@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
 export const useBottomSheetAnimation = (menuOpen, setMenuOpen, refs) => {
   const { menuRef, backdropRef, itemsRef } = refs;
 
   // Animation Logic
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!menuRef.current) return;
 
     if (menuOpen) {
@@ -47,7 +47,7 @@ export const useBottomSheetAnimation = (menuOpen, setMenuOpen, refs) => {
   }, [menuOpen, menuRef, backdropRef, itemsRef]);
 
   // Swipe Down Logic
-  useEffect(() => {
+  useLayoutEffect(() => {
     let startY = 0;
 
     const onTouchStart = (e) => {

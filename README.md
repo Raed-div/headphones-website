@@ -480,12 +480,59 @@ Buttons: from-[#52483E] to-[#8B8782]
 - ✅ Maintain color contrast ratios
 - ✅ Provide alt text for images
 
+### Performance ⚡
+- ✅ **useLayoutEffect** for GSAP animations (prevents forced reflows)
+- ✅ **GSAP Context** pattern for proper cleanup
+- ✅ **fetchpriority="high"** for LCP image
+- ✅ **Lazy loading** for non-critical images
+- ✅ **Image dimensions** to prevent CLS
+- ✅ **Google Fonts** optimization (non-blocking)
+- ✅ **Cache headers** for static assets (Netlify)
+- ✅ **4 font weights** instead of 6 (reduced network requests)
+
 ### File Organization
 - ✅ Group related files together
 - ✅ Use index files for clean imports
 - ✅ Separate data from components
 - ✅ Keep utility functions separate
 - ✅ Use consistent file naming
+
+---
+
+## ⚡ Performance
+
+### Lighthouse Score
+- **Development (localhost)**: ~68%
+- **Production (Netlify)**: ~75-85% (estimated)
+
+### Optimizations Applied
+1. **GSAP Animations**:
+   - useLayoutEffect instead of useEffect
+   - GSAP Context pattern for cleanup
+   - Transform-based animations (GPU accelerated)
+
+2. **Images**:
+   - fetchpriority="high" for LCP image
+   - Lazy loading for below-fold images
+   - Width/height attributes to prevent CLS
+   - 6 images in HorizontalGallery (optimized)
+
+3. **Fonts**:
+   - Google Fonts: 4 weights (400, 500, 600, 700)
+   - Non-blocking loading (media="print" trick)
+   - Preconnect to font providers
+
+4. **Caching**:
+   - Static assets cached for 1 year
+   - HTML/manifest not cached
+   - Configured in `public/_headers`
+
+### Further Optimization Tips
+See **[PERFORMANCE.md](./PERFORMANCE.md)** for:
+- Image compression guide
+- WebP conversion
+- Production build tips
+- Detailed Lighthouse improvements
 
 ---
 
@@ -520,6 +567,7 @@ Contributions are welcome! Please follow these steps:
 
 - **[Project Summary](./PROJECT_SUMMARY.md)** - Complete project overview and achievements
 - **[Changelog](./CHANGELOG.md)** - Version history and updates
+- **[Performance Guide](./PERFORMANCE.md)** - Performance optimization and Lighthouse improvements
 - **[Refactoring Guide](./REFACTORING_GUIDE.md)** - Detailed architecture and refactoring information
 - **[Color System](./COLOR_SYSTEM.md)** - Complete color palette and usage guide
 - **[Content Management](./CONTENT_MANAGEMENT.md)** - Content system and API integration guide

@@ -27,6 +27,9 @@ const ProductCompareCard = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
+            loading="lazy"
+            width="200"
+            height="200"
             className="h-full w-auto object-contain"
           />
         </div>

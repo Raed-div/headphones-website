@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import headphonesImg from "../../assets/images/headphones.png";
 import { useHeroTextAnimation } from "../../hooks/useHeroTextAnimation";
 import { gsap } from "gsap";
@@ -12,46 +12,48 @@ const HeroContent = () => {
   useHeroTextAnimation(headingRef);
 
   // Image animations
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!imageRef.current) return;
 
-    // Initial entrance animation
-    gsap.fromTo(
-      imageRef.current,
-      {
-        y: 100,
-        opacity: 0,
-        scale: 0.8,
-        rotation: -5,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: 0.3,
-      }
-    );
+    const ctx = gsap.context(() => {
+      // Initial entrance animation
+      gsap.fromTo(
+        imageRef.current,
+        {
+          y: 100,
+          opacity: 0,
+          scale: 0.8,
+          rotation: -5,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          rotation: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          delay: 0.3,
+        }
+      );
 
-    // Continuous floating animation
-    gsap.to(imageRef.current, {
-      y: -20,
-      duration: 2.5,
-      ease: "power1.inOut",
-      yoyo: true,
-      repeat: -1,
-    });
+      // Continuous floating animation
+      gsap.to(imageRef.current, {
+        y: -20,
+        duration: 2.5,
+        ease: "power1.inOut",
+        yoyo: true,
+        repeat: -1,
+      });
 
-    // Subtle rotation animation
-    gsap.to(imageRef.current, {
-      rotation: 3,
-      duration: 3,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1,
-    });
+      // Subtle rotation animation
+      gsap.to(imageRef.current, {
+        rotation: 3,
+        duration: 3,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+      });
+    }, containerRef);
 
     // Mouse parallax effect
     const handleMouseMove = (e) => {
@@ -75,6 +77,7 @@ const HeroContent = () => {
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
+      ctx.revert();
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
@@ -117,7 +120,10 @@ const HeroContent = () => {
         <img
           ref={imageRef}
           src={headphonesImg}
-          alt="Headphones"
+          alt="Resonance Aura Pro II Headphones"
+          fetchpriority="high"
+          width="620"
+          height="620"
           className="
             relative
             z-10
