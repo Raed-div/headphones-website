@@ -32,7 +32,7 @@ const ColorPicker = () => {
         {/* Header Section */}
         <div className="max-w-3xl mx-auto mb-8">
           <h2 
-            className="font-bold text-[#3D3D3D] mb-4"
+            className="font-bold text-[#52483E] mb-4"
             style={{ fontSize: '48px' }}
           >
             Your Style. Your Sound.

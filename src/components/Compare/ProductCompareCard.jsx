@@ -18,7 +18,7 @@ const ProductCompareCard = ({ product }) => {
       {/* Product Image Container with Name, Price and Button */}
       <div className="relative flex flex-col items-center justify-center bg-[#F5F5F5] rounded-xl py-8 px-6 mb-8">
         {/* Product Name */}
-        <h2 className="text-2xl font-semibold text-[#4A4A4A] text-center mb-6">
+        <h2 className="text-2xl font-semibold text-[#52483E] text-center mb-6">
           {product.name}
         </h2>
 
@@ -35,7 +35,7 @@ const ProductCompareCard = ({ product }) => {
         </div>
 
         {/* Price */}
-        <p className="text-center text-sm text-gray-500 mb-4">
+        <p className="text-center text-sm text-[#8B8782] mb-4">
           Starting at {product.price}
         </p>
 
@@ -58,13 +58,13 @@ const ProductCompareCard = ({ product }) => {
             } ${feature.disabled ? "opacity-30" : ""}`}
           >
             {/* Icon */}
-            <div className="mb-2.5 text-gray-400" aria-hidden="true">
+            <div className="mb-2.5 text-[#D2CDC6]" aria-hidden="true">
               {feature.icon}
             </div>
             
             {/* Label */}
             <p className={`text-xs leading-relaxed px-4 ${
-              feature.disabled ? "text-gray-400" : "text-gray-600"
+              feature.disabled ? "text-gray-400" : "text-[#666666]"
             }`}>
               {feature.label}
             </p>

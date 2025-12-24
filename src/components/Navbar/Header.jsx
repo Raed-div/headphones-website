@@ -135,7 +135,7 @@ const Header = ({ setMenuOpen }) => {
             rounded-lg       
             cursor-pointer
             focus:outline-none
-            text-[#000000]
+            text-[#3E3E3E]
           "
           onClick={() => setMenuOpen(true)}
         >

@@ -183,201 +183,201 @@ const TechSpecs = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Audio Technology */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">
               Audio Technology
             </h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Speaker type:</span>
-                <span className="font-medium sm:text-right">40mm neodymium drivers with custom-tuned DSP</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">40mm neodymium drivers with custom-tuned DSP</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Frequency range:</span>
-                <span className="font-medium sm:text-right">5Hz - 40kHz (Hi-Res certified)</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">5Hz - 40kHz (Hi-Res certified)</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Active Noise Cancellation:</span>
-                <span className="font-medium sm:text-right">Adaptive ANC up to 45dB reduction</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Adaptive ANC up to 45dB reduction</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Transparency mode:</span>
-                <span className="font-medium sm:text-right">3-level adjustable ambient sound</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">3-level adjustable ambient sound</span>
               </div>
             </div>
           </div>
 
           {/* Intelligence */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">
               Intelligence
             </h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Spatial audio:</span>
-                <span className="font-medium sm:text-right">360° spatial with head tracking</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">360° spatial with head tracking</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Smart features:</span>
-                <span className="font-medium sm:text-right">Auto play/pause, voice assistant integration</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Auto play/pause, voice assistant integration</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Wear detection:</span>
-                <span className="font-medium sm:text-right">Automatic pause when removed</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Automatic pause when removed</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Multipoint pairing:</span>
-                <span className="font-medium sm:text-right">Connect up to 3 devices simultaneously</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Connect up to 3 devices simultaneously</span>
               </div>
             </div>
           </div>
 
           {/* Power */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Power</h2>
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">Power</h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Battery life (ANC on):</span>
-                <span className="font-medium sm:text-right">Up to 30 hours</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Up to 30 hours</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Quick charge:</span>
-                <span className="font-medium sm:text-right">5 min charge = 3 hours playback</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">5 min charge = 3 hours playback</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Charging port:</span>
-                <span className="font-medium sm:text-right">USB-C with fast charging support</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">USB-C with fast charging support</span>
               </div>
             </div>
           </div>
 
           {/* Controls */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Controls</h2>
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">Controls</h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Touch controls:</span>
-                <span className="font-medium sm:text-right">Tap, swipe, and hold gestures</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Tap, swipe, and hold gestures</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Physical buttons:</span>
-                <span className="font-medium sm:text-right">Power, ANC toggle, volume rocker</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Power, ANC toggle, volume rocker</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Voice assistant:</span>
-                <span className="font-medium sm:text-right">Wake word or button activation</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Wake word or button activation</span>
               </div>
             </div>
           </div>
 
           {/* Built For The Elements */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">
               Built For The Elements
             </h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Weather resistance:</span>
-                <span className="font-medium sm:text-right">IPX4 splash and sweat resistant</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">IPX4 splash and sweat resistant</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Temperature range:</span>
-                <span className="font-medium sm:text-right">-10°C to 45°C operating range</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">-10°C to 45°C operating range</span>
               </div>
             </div>
           </div>
 
           {/* Battery */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Battery</h2>
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">Battery</h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Cell type:</span>
-                <span className="font-medium sm:text-right">Lithium-ion rechargeable (950mAh)</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Lithium-ion rechargeable (950mAh)</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Charge cycles:</span>
-                <span className="font-medium sm:text-right">500+ full cycles to 80% capacity</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">500+ full cycles to 80% capacity</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Standby time:</span>
-                <span className="font-medium sm:text-right">Up to 200 hours</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Up to 200 hours</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Battery indicator:</span>
-                <span className="font-medium sm:text-right">LED and app display with percentage</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">LED and app display with percentage</span>
               </div>
             </div>
           </div>
 
           {/* Connectivity */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">
               Connectivity
             </h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Bluetooth version:</span>
-                <span className="font-medium sm:text-right">5.3 with LE Audio</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">5.3 with LE Audio</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Codecs:</span>
-                <span className="font-medium sm:text-right">LDAC, aptX Adaptive, AAC, SBC</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">LDAC, aptX Adaptive, AAC, SBC</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Range:</span>
-                <span className="font-medium sm:text-right">Up to 30m (line of sight)</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Up to 30m (line of sight)</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Wired option:</span>
-                <span className="font-medium sm:text-right">3.5mm aux cable (included)</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">3.5mm aux cable (included)</span>
               </div>
             </div>
           </div>
 
           {/* Materials */}
           <div className="border-b border-gray-300 pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Materials</h2>
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">Materials</h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Headband:</span>
-                <span className="font-medium sm:text-right">Aluminum alloy with soft-touch coating</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Aluminum alloy with soft-touch coating</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Ear cushions:</span>
-                <span className="font-medium sm:text-right">Memory foam with premium vegan leather</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Memory foam with premium vegan leather</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Weight:</span>
-                <span className="font-medium sm:text-right">250g (lightweight design)</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">250g (lightweight design)</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Sustainability:</span>
-                <span className="font-medium sm:text-right">45% recycled materials, carbon neutral shipping</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">45% recycled materials, carbon neutral shipping</span>
               </div>
             </div>
           </div>
 
           {/* Sustainability & Materials */}
           <div className="pb-8">
-            <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">
+            <h2 className="text-2xl font-semibold text-[#52483E] mb-6">
               Sustainability & Materials
             </h2>
             <div className="space-y-4 text-[#52483E]">
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Eco-friendly packaging:</span>
-                <span className="font-medium sm:text-right">100% recyclable materials</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">100% recyclable materials</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Replaceable parts:</span>
-                <span className="font-medium sm:text-right">Ear cushions, cables, and headband padding</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">Ear cushions, cables, and headband padding</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Certifications:</span>
-                <span className="font-medium sm:text-right">FSC, Energy Star, RoHS compliant</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">FSC, Energy Star, RoHS compliant</span>
               </div>
               <div className="flex flex-col sm:flex-row sm:justify-between gap-2">
                 <span className="text-gray-600">Product lifespan:</span>
-                <span className="font-medium sm:text-right">5+ years with proper care</span>
+                <span className="font-medium sm:text-right text-[#8B8782]">5+ years with proper care</span>
               </div>
             </div>
           </div>
@@ -385,7 +385,7 @@ const TechSpecs = () => {
 
         {/* Bottom Section */}
         <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-[#1A1A1A] mb-4">
+          <h3 className="text-3xl font-bold text-[#52483E] mb-4">
             Sound. Presence. Purpose.
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">

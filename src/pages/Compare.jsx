@@ -21,10 +21,10 @@ const Compare = () => {
       <div className="container mx-auto px-6 pt-32 pb-20">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-semibold text-[#3E3E3E] mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold text-[#52483E] mb-4">
             Compare Resonance Models
           </h1>
-          <p className="text-base text-gray-500">
+          <p className="text-base text-[#8B8782]">
             Get help choosing. Chat with a Specialist.
           </p>
         </div>
