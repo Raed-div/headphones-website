@@ -111,6 +111,8 @@ const ProductCarousel = ({
           ref={(el) => (imgRefs.current[index] = el)}
           src={prod.image}
           alt={`${prod.color} headphones`}
+          loading="lazy"
+          decoding="async"
           className="absolute w-[75vw] sm:w-[60vw] md:w-[50vw] lg:w-[400px] h-auto cursor-pointer transition-all"
           style={{ willChange: 'transform, opacity, filter' }}
           onClick={() => setCenterIndex(index)}
