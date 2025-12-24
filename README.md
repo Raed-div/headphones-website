@@ -518,6 +518,8 @@ Contributions are welcome! Please follow these steps:
 
 ## 📝 Documentation
 
+- **[Project Summary](./PROJECT_SUMMARY.md)** - Complete project overview and achievements
+- **[Changelog](./CHANGELOG.md)** - Version history and updates
 - **[Refactoring Guide](./REFACTORING_GUIDE.md)** - Detailed architecture and refactoring information
 - **[Color System](./COLOR_SYSTEM.md)** - Complete color palette and usage guide
 - **[Content Management](./CONTENT_MANAGEMENT.md)** - Content system and API integration guide

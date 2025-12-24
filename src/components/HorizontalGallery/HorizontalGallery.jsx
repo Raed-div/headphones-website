@@ -11,9 +11,12 @@ function importAll(r) {
 
 let images = [];
 try {
-  images = importAll(
+  const allImages = importAll(
     require.context("../../assets/images", false, /\.(png|jpe?g|svg|webp)$/)
   );
+  // أخذ أول صورتين وتكرارهم 3 مرات = 6 صور
+  const firstTwo = allImages.slice(2, 4); // beige.png, green.png
+  images = [...firstTwo, ...firstTwo, ...firstTwo];
 } catch (error) {
   console.error(
     "لم يتم العثور على مجلد الصور، تأكد من المسار: src/assets/images",

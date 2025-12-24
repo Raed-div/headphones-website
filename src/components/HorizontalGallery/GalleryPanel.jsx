@@ -18,7 +18,7 @@ const GalleryPanel = forwardRef(({ src, alt, className = "" }, ref) => {
         ref={ref}
         src={src}
         alt={alt}
-        className="w-full h-full object-cover block will-change-transform"
+        className="w-full h-full object-contain block will-change-transform"
       />
     </div>
   );
