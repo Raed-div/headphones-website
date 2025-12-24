@@ -20,7 +20,8 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Tech Specs", path: "/tech-specs" }
+    { name: "Tech Specs", path: "/tech-specs" },
+    { name: "Compare", path: "/compare" }
   ];
 
   return (
@@ -60,14 +61,6 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
             {item.name}
           </Link>
         ))}
-
-        <button
-          ref={(el) => (itemsRef.current[2] = el)}
-          onClick={() => setMenuOpen(false)}
-          className="mt-auto bg-[#52483E] text-white py-4 rounded-full text-lg"
-        >
-          Compare
-        </button>
       </div>
     </>
   );

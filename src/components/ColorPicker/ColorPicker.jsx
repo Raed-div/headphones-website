@@ -27,7 +27,7 @@ const ColorPicker = () => {
   const imgRefs = useRef([]);
 
   return (
-    <section className="py-16 px-6 bg-[#ECEAEA]">
+    <section className="py-16 px-6 bg-[#F5F5F5]">
       <div className="container mx-auto text-center">
         {/* Header Section */}
         <div className="max-w-3xl mx-auto mb-8">

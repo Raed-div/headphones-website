@@ -52,7 +52,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#D8D4CF] to-[#CBC5BD]">
+    <footer className="bg-gradient-to-b from-[#F5F5F5] to-[#D2CDC6]">
       {/* Main Hero Section */}
       <div className="container mx-auto px-6 pt-20 pb-16">
         <div className="text-center max-w-3xl mx-auto">

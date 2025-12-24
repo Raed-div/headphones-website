@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ setMenuOpen }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? "bg-[#F5F1EC]/95 backdrop-blur-md shadow-md" 
+        : "bg-transparent"
+    }`}>
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -81,9 +100,10 @@ const Header = ({ setMenuOpen }) => {
           </Link>
 
           <div className="relative inline-block rounded-[24px] p-[1px] bg-gradient-to-r from-[#000000] to-[#8B8782]">
-            <button
-              type="button"
+            <Link
+              to="/compare"
               className="
+                block
                 w-full
                 px-6
                 py-2
@@ -96,10 +116,11 @@ const Header = ({ setMenuOpen }) => {
                 to-[#8B8782]
                 focus:outline-none
                 cursor-pointer
+                text-center
               "
             >
               Compare
-            </button>
+            </Link>
           </div>
         </nav>
 
