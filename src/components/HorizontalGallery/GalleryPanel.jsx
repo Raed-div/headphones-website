@@ -18,8 +18,6 @@ const GalleryPanel = forwardRef(({ src, alt, className = "" }, ref) => {
         ref={ref}
         src={src}
         alt={alt}
-        loading="lazy"
-        decoding="async"
         className="w-full h-full object-contain block will-change-transform"
       />
     </div>
