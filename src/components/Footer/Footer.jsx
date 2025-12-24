@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -67,8 +68,8 @@ const Footer = () => {
           
           {/* Product Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#"
+            <Link
+              to="/tech-specs"
               className="
                 px-8 py-3
                 rounded-full
@@ -83,9 +84,9 @@ const Footer = () => {
               "
             >
               Aura Pro II
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/compare"
               className="
                 px-8 py-3
                 rounded-full
@@ -100,7 +101,7 @@ const Footer = () => {
               "
             >
               Flow II
-            </a>
+            </Link>
           </div>
         </div>
       </div>

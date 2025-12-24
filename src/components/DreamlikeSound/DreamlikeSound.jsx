@@ -53,8 +53,8 @@ const DreamlikeSound = () => {
         </p>
 
         {/* CTA Button */}
-        <a
-          href="#"
+        <button
+          type="button"
           className="
             px-8 py-3
             bg-white
@@ -72,7 +72,7 @@ const DreamlikeSound = () => {
           "
         >
           Buy Now
-        </a>
+        </button>
       </div>
     </section>
   );
