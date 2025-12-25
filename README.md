@@ -3,7 +3,7 @@
 **Live Demo:** [http://headphones-website-2025.netlify.app](http://headphones-website-2025.netlify.app)
 
 <div align="center">
-  <img src="demo.jpg" alt="Landing Page Visual" width="100%" />
+  <img src="../demo.jpg" alt="Landing Page Visual" width="100%" />
 </div>
 
 ## 🌟 Overview
