@@ -26,9 +26,9 @@ const DreamlikeSound = () => {
             tracking-tight
             mb-4 md:mb-6
             drop-shadow-lg
+            text-5xl md:text-7xl lg:text-[86px]
           "
           style={{
-            fontSize: '86px',
             textShadow: '0 4px 20px rgba(0,0,0,0.3)',
           }}
         >

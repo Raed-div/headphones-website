@@ -16,7 +16,7 @@ const AudioCards = () => {
   ];
 
   return (
-    <div className="bg-[#F5F5F5] p-12">
+    <div className="bg-[#F5F5F5] p-6 md:p-12">
       <div className="flex justify-center gap-8 flex-wrap">
         {cardsData.map((card, index) => (
           <div

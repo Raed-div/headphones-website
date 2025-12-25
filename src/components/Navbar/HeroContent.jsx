@@ -127,7 +127,7 @@ const HeroContent = () => {
           className="
             relative
             z-10
-            w-[420px]
+            w-[85vw]
             sm:w-[480px]
             md:w-[560px]
             lg:w-[620px]
@@ -142,7 +142,7 @@ const HeroContent = () => {
           className="
             absolute
             top-1/2
-            -translate-y-[120px]
+            -translate-y-[100px]
             sm:-translate-y-[150px]
             md:-translate-y-[180px]
             lg:-translate-y-[210px]
