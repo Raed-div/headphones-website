@@ -134,7 +134,8 @@ const Footer = () => {
             {/* Copyright and Social Links */}
             <div className="flex items-center gap-6">
               <p className="text-sm text-[#8B8782]">
-                © {currentYear} Resonance. All rights reserved.
+                Developed with{" "}
+                <span className="text-red-500">❤</span> by Raed Alturki
               </p>
               
               {/* Social Icons */}
