@@ -13,8 +13,8 @@ import {
 } from "../components/Compare/icons";
 
 // Import product images
-import beigeImg from "../assets/images/beige.png";
-import flowImg from "../assets/images/Flow-II.png";
+import beigeImg from "../assets/images/beige.webp";
+import flowImg from "../assets/images/Flow-II.webp";
 
 /**
  * Product data for comparison page

@@ -1,7 +1,7 @@
 // src/components/AudioCards.jsx
 import React from "react";
-import beigeImg from "../../assets/images/headphone-Model.png";
-import greenImg from "../../assets/images/headphone-Model.png";
+import beigeImg from "../../assets/images/headphone-Model.webp";
+import greenImg from "../../assets/images/headphone-Model.webp";
 
 const AudioCards = () => {
   const cardsData = [

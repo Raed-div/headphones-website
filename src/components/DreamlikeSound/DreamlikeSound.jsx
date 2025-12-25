@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../../assets/images/VisualIntro.png";
+import backgroundImage from "../../assets/images/VisualIntro.webp";
 
 const DreamlikeSound = () => {
   return (

@@ -6,9 +6,9 @@ import MobileMenu from "../components/Navbar/MobileMenu";
 import Footer from "../components/Footer/Footer";
 
 // Import images
-import beigeImg from "../assets/images/beige.png";
-import greenImg from "../assets/images/green.png";
-import redImg from "../assets/images/red.png";
+import beigeImg from "../assets/images/beige.webp";
+import greenImg from "../assets/images/green.webp";
+import redImg from "../assets/images/red.webp";
 
 const TechSpecs = () => {
   const [menuOpen, setMenuOpen] = useState(false);

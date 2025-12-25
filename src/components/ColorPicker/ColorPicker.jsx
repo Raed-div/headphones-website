@@ -3,9 +3,9 @@ import ProductCarousel from "./ProductCarousel";
 import ColorButtons from "./ColorButtons";
 
 // استيراد الصور من المجلد المحلي
-import beigeImg from "../../assets/images/beige.png";
-import greenImg from "../../assets/images/green.png";
-import redImg from "../../assets/images/red.png";
+import beigeImg from "../../assets/images/beige.webp";
+import greenImg from "../../assets/images/green.webp";
+import redImg from "../../assets/images/red.webp";
 
 // المنتجات
 const products = [

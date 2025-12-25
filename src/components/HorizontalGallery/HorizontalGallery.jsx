@@ -3,26 +3,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GalleryTrack from "./GalleryTrack";
 
+// Import WebP images for the gallery
+import img1 from "../../assets/images/beige.webp";
+import img2 from "../../assets/images/green.webp";
+
 gsap.registerPlugin(ScrollTrigger);
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-let images = [];
-try {
-  const allImages = importAll(
-    require.context("../../assets/images", false, /\.(png|jpe?g|svg|webp)$/)
-  );
-  // أخذ أول صورتين وتكرارهم 3 مرات = 6 صور
-  const firstTwo = allImages.slice(2, 4); // beige.png, green.png
-  images = [...firstTwo, ...firstTwo, ...firstTwo];
-} catch (error) {
-  console.error(
-    "لم يتم العثور على مجلد الصور، تأكد من المسار: src/assets/images",
-    error
-  );
-}
+const images = [img1, img2, img1, img2, img1, img2];
 
 export default function HorizontalGallery() {
   const scrollWrapperRef = useRef(null);

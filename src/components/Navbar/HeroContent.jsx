@@ -1,5 +1,5 @@
 import React, { useRef, useLayoutEffect } from "react";
-import headphonesImg from "../../assets/images/headphones.png";
+import headphonesImg from "../../assets/images/headphones.webp";
 import { useHeroTextAnimation } from "../../hooks/useHeroTextAnimation";
 import { gsap } from "gsap";
 
