@@ -93,7 +93,7 @@ const HeroContent = () => {
     <section className="min-h-screen bg-gradient-to-b from-[#D2CDC6] to-[#F5F5F5] flex items-center justify-center">
       <div 
         ref={containerRef}
-        className="relative w-full max-w-[1200px] h-[700px] flex items-center justify-center"
+        className="relative w-full max-w-[1200px] min-h-[100vh] md:min-h-[700px] flex items-center justify-center overflow-hidden"
       >
         {/* Background Text */}
         <p
@@ -103,13 +103,13 @@ const HeroContent = () => {
             bg-clip-text
             bg-gradient-to-r from-[#DACCBC] to-[#AFA497]
             font-medium
-            text-[70px]
+            text-[18vw]
             sm:text-[100px]
             md:text-[130px]
             lg:text-[140px]
             leading-none
             z-0
-            translate-y-6
+            translate-y-6 md:translate-y-6
             pointer-events-none
           "
         >
@@ -127,10 +127,11 @@ const HeroContent = () => {
           className="
             relative
             z-10
-            w-[85vw]
-            sm:w-[480px]
-            md:w-[560px]
-            lg:w-[620px]
+            w-[80vw]
+            max-w-[320px]
+            sm:max-w-[480px]
+            md:max-w-[560px]
+            lg:max-w-[620px]
             drop-shadow-2xl
           "
           style={{ willChange: 'transform' }}
@@ -142,7 +143,7 @@ const HeroContent = () => {
           className="
             absolute
             top-1/2
-            -translate-y-[100px]
+            -translate-y-[80px]
             sm:-translate-y-[150px]
             md:-translate-y-[180px]
             lg:-translate-y-[210px]
@@ -150,11 +151,13 @@ const HeroContent = () => {
             text-[#52483E]
             tracking-tight
             leading-none
-            text-[80px]
+            text-[15vw]
             sm:text-[100px]
             md:text-[140px]
             lg:text-[180px]
             z-20
+            w-full
+            text-center
           "
         >
           {splitText("Resonance")}

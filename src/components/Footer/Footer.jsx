@@ -55,7 +55,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-[#F5F5F5] to-[#D2CDC6]">
       {/* Main Hero Section */}
-      <div className="container mx-auto px-6 pt-20 pb-16">
+      <div className="container mx-auto px-6 pt-12 md:pt-20 pb-16">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#52483E] mb-6 tracking-tight">
             Sound. Presence. Purpose.
