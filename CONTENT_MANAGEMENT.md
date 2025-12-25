@@ -373,6 +373,6 @@ For questions about the content system:
 
 ---
 
-**Last Updated:** December 2024  
-**Version:** 1.0.0  
+**Last Updated:** December 26, 2024  
+**Version:** 1.2.0  
 **Maintained by:** Raed

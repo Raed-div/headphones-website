@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.2.0] - 2024-12-26
+
+### 🚀 Major Updates
+- **React 19**: Upgraded from React 18 to React 19.2.3
+- **React Router 7**: Upgraded from React Router 6 to 7.11.0
+- **Image Optimization**: All images converted to WebP format (85-90% size reduction)
+  - beige.webp (184KB), green.webp (171KB), red.webp (179KB)
+  - headphones.webp (155KB), Flow-II.webp (32KB)
+  - VisualIntro.webp (108KB), headphone-Model.webp (66KB)
+
+### 📁 New Components
+- **AudioCard**: Audio feature cards with gradient backgrounds
+- **DreamlikeSound**: Hero CTA section with background image
+- **HorizontalGallery**: Scroll-triggered horizontal gallery
+  - GalleryTrack.jsx, GalleryPanel.jsx
+
+### 🎣 Custom Hooks
+- `useBottomSheetAnimation` - Bottom sheet animation logic
+- `useCloseOnResize` - Auto-close on window resize
+- `useHeroTextAnimation` - Hero text reveal animation
+- `useLockBodyScroll` - Lock body scroll when menu is open
+
+### 📝 Documentation
+- Updated all documentation files to reflect current state
+- Added 7 documentation files (was 5)
+- Updated version numbers and tech stack info
+
+### 🔧 Technical
+- **Sharp**: Added as dev dependency for image conversion
+- **PostCSS**: Updated to 8.5.6
+- **Tailwind**: Updated to 3.4.19
+
+---
+
 ## [1.1.0] - 2024-12-24
 
 ### ⚡ Performance Optimization

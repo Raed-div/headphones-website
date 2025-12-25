@@ -3,9 +3,9 @@
 <div align="center">
 
 ![Resonance](https://img.shields.io/badge/Resonance-Premium_Audio-8B8782?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
-![GSAP](https://img.shields.io/badge/GSAP-Animation-88CE02?style=for-the-badge&logo=greensock)
+![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![GSAP](https://img.shields.io/badge/GSAP-3.14-88CE02?style=for-the-badge&logo=greensock)
 
 **A modern, responsive website showcasing premium headphones with interactive product comparisons and smooth animations.**
 
@@ -93,10 +93,10 @@ Resonance is a premium headphones e-commerce website built with modern web techn
 ## 🛠️ Tech Stack
 
 ### Core Technologies
-- **[React](https://react.dev/)** `^18.x` - UI library
-- **[React Router DOM](https://reactrouter.com/)** `^6.x` - Client-side routing
-- **[Tailwind CSS](https://tailwindcss.com/)** `^3.x` - Utility-first CSS framework
-- **[GSAP](https://greensock.com/gsap/)** `^3.x` - Animation library
+- **[React](https://react.dev/)** `^19.2.3` - UI library
+- **[React Router DOM](https://reactrouter.com/)** `^7.11.0` - Client-side routing
+- **[Tailwind CSS](https://tailwindcss.com/)** `^3.4.19` - Utility-first CSS framework
+- **[GSAP](https://greensock.com/gsap/)** `^3.14.2` - Animation library
 
 ### Development Tools
 - **Create React App** - Project setup and build tools
@@ -119,35 +119,43 @@ headphones-website/
 │   ├── index.html
 │   └── favicon.ico
 ├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       ├── beige.png              # Aura Pro II product image
-│   │       ├── green.png
-│   │       ├── red.png
-│   │       └── Flow-II.png            # Flow II product image
+│   ├── assets/images/
+│   │   ├── beige.webp, green.webp, red.webp     # Product images (WebP)
+│   │   ├── headphones.webp, Flow-II.webp        # Hero & product images
+│   │   ├── VisualIntro.webp, headphone-Model.webp
 │   ├── components/
+│   │   ├── AudioCard/               # Audio feature cards
 │   │   ├── ColorPicker/
-│   │   │   ├── ColorPicker.jsx        # Main color picker component
-│   │   │   ├── ProductCarousel.jsx    # Image carousel with GSAP
-│   │   │   └── ColorButtons.jsx       # Color selection buttons
+│   │   │   ├── ColorPicker.jsx      # Main color picker component
+│   │   │   ├── ProductCarousel.jsx  # Image carousel with GSAP
+│   │   │   └── ColorButtons.jsx     # Color selection buttons
 │   │   ├── Compare/
 │   │   │   ├── ProductCompareCard.jsx # Comparison card component
-│   │   │   └── icons.jsx              # SVG icon library
+│   │   │   └── icons.jsx            # SVG icon library (10 icons)
+│   │   ├── DreamlikeSound/          # CTA hero section
+│   │   ├── HorizontalGallery/       # Scroll-triggered gallery
+│   │   │   ├── HorizontalGallery.jsx, GalleryTrack.jsx, GalleryPanel.jsx
 │   │   ├── Navbar/
-│   │   │   ├── Header.jsx             # Desktop navigation
-│   │   │   └── MobileMenu.jsx         # Mobile navigation menu
+│   │   │   ├── Header.jsx           # Desktop navigation
+│   │   │   ├── MobileMenu.jsx       # Mobile navigation menu
+│   │   │   ├── HeroSection.jsx, HeroContent.jsx
 │   │   └── Footer/
-│   │       └── Footer.jsx             # Website footer
+│   │       └── Footer.jsx           # Website footer
 │   ├── data/
-│   │   ├── productsData.js            # Product specifications data
-│   │   └── content.js                 # Centralized content management
+│   │   ├── productsData.js          # Product specifications data
+│   │   └── content.js               # Centralized content management
+│   ├── hooks/                       # Custom React hooks
+│   │   ├── useBottomSheetAnimation.js
+│   │   ├── useCloseOnResize.js
+│   │   ├── useHeroTextAnimation.js
+│   │   └── useLockBodyScroll.js
 │   ├── pages/
-│   │   ├── Home.jsx                   # Homepage
-│   │   ├── TechSpecs.jsx              # Technical specifications
-│   │   └── Compare.jsx                # Product comparison
-│   ├── App.js                         # Main app component with routing
-│   ├── index.js                       # Application entry point
-│   └── index.css                      # Global styles
+│   │   ├── Home.jsx                 # Homepage
+│   │   ├── TechSpecs.jsx            # Technical specifications
+│   │   └── Compare.jsx              # Product comparison
+│   ├── App.js                       # Main app component with routing
+│   ├── index.js                     # Application entry point
+│   └── index.css                    # Global styles
 ├── .gitignore
 ├── package.json
 ├── tailwind.config.js                 # Tailwind configuration
@@ -578,14 +586,16 @@ Contributions are welcome! Please follow these steps:
 
 ## 📊 Project Metrics
 
-- **Total Components:** 20+
+- **Total Components:** 25+
 - **Pages:** 3
 - **Custom Icons:** 10 (SVG)
+- **Custom Hooks:** 4
 - **Animations:** 5+ advanced GSAP animations
-- **Lines of Code:** ~3,000+
+- **Lines of Code:** ~3,500+
 - **Content Items:** 100+ centralized in content.js
+- **Image Format:** WebP (Optimized)
 - **Build Size:** < 500KB (gzipped)
-- **Performance Score:** 95+ (Lighthouse)
+- **Performance Score:** 85-95% (Lighthouse)
 - **Accessibility:** WCAG AA compliant
 
 ---

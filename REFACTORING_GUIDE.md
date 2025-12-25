@@ -1,29 +1,46 @@
-# 🎧 Headphones Website - Compare Page
+# 🎧 Headphones Website - Architecture Guide
 
 ## 📁 Project Structure
 
 ```
 src/
+├── assets/images/              # WebP optimized images (7 files)
 ├── components/
+│   ├── AudioCard/              # Audio feature cards
+│   │   └── AudioCard.jsx
+│   ├── ColorPicker/            # Color selection system
+│   │   ├── ColorPicker.jsx     # Main component
+│   │   ├── ColorButtons.jsx    # Color option buttons
+│   │   └── ProductCarousel.jsx # Image carousel
 │   ├── Compare/
-│   │   ├── ProductCompareCard.jsx    # Card component for product comparison
-│   │   └── icons.jsx                 # SVG icon components
+│   │   ├── ProductCompareCard.jsx
+│   │   └── icons.jsx           # SVG icon components (10 icons)
+│   ├── DreamlikeSound/         # CTA section
+│   │   └── DreamlikeSound.jsx
+│   ├── HorizontalGallery/      # Scroll gallery
+│   │   ├── HorizontalGallery.jsx
+│   │   ├── GalleryTrack.jsx
+│   │   └── GalleryPanel.jsx
 │   ├── Navbar/
-│   │   ├── Header.jsx
-│   │   └── MobileMenu.jsx
+│   │   ├── Header.jsx          # Smart header (scroll-aware)
+│   │   ├── MobileMenu.jsx      # Mobile navigation
+│   │   ├── HeroSection.jsx     # Hero wrapper
+│   │   └── HeroContent.jsx     # Animated hero content
 │   └── Footer/
 │       └── Footer.jsx
-├── pages/
-│   ├── Home.jsx                      # Homepage
-│   ├── TechSpecs.jsx                 # Technical specifications page
-│   └── Compare.jsx                   # Product comparison page
 ├── data/
-│   └── productsData.js               # Product data and specifications
-├── assets/
-│   └── images/
-│       ├── beige.png                 # Aura Pro II image
-│       └── Flow-II.png               # Flow II image
-└── App.js                            # Main app with routing
+│   ├── content.js              # Centralized content (500+ lines)
+│   └── productsData.js         # Product specifications
+├── hooks/                      # Custom React hooks
+│   ├── useBottomSheetAnimation.js
+│   ├── useCloseOnResize.js
+│   ├── useHeroTextAnimation.js
+│   └── useLockBodyScroll.js
+├── pages/
+│   ├── Home.jsx                # Homepage
+│   ├── TechSpecs.jsx           # Technical specifications
+│   └── Compare.jsx             # Product comparison
+└── App.js                      # Router setup (React Router 7)
 ```
 
 ## 🎨 Compare Page Architecture
@@ -167,8 +184,12 @@ import { NewIcon } from "../components/Compare/icons";
 2. **DRY (Don't Repeat Yourself)** - Reusable components and data
 3. **Separation of Concerns** - UI, data, and logic separated
 4. **Component Composition** - Small, focused components
-5. **Documentation** - Clear comments and README
+5. **Custom Hooks** - Reusable logic extracted to hooks
+6. **Content Management** - All text centralized in content.js
+7. **Documentation** - Clear comments and README
 
 ---
 
-**Built with ❤️ using React and Tailwind CSS**
+**Built with ❤️ using React 19 and Tailwind CSS**
+
+**Last Updated:** December 26, 2024

@@ -6,8 +6,9 @@
 **Brand**: Resonance  
 **Type**: Premium Headphones E-commerce Website  
 **Status**: ✅ Complete & Performance Optimized
-**Version**: 1.1.0
+**Version**: 1.2.0
 **Developer**: Raed (@Raed-div)
+**Last Updated**: December 26, 2024
 
 ---
 
@@ -46,13 +47,15 @@
 ## 📁 Project Statistics
 
 ```
-Total Files Created/Modified: 25+
-Total Lines of Code: ~3,000+
-Components: 20+
+Total Files Created/Modified: 30+
+Total Lines of Code: ~3,500+
+Components: 25+
 Pages: 3
 Custom Icons: 10
-Animations: 5+
-Documentation Files: 5
+Animations: 5+ (GSAP)
+Custom Hooks: 4
+Documentation Files: 7
+Image Format: WebP (Optimized)
 ```
 
 ---
@@ -114,25 +117,37 @@ Buttons: #52483E → #8B8782 (left to right)
 
 ```
 src/
+├── assets/images/        # WebP optimized images
+│   ├── beige.webp, green.webp, red.webp
+│   ├── headphones.webp, Flow-II.webp
+│   ├── VisualIntro.webp, headphone-Model.webp
 ├── components/
+│   ├── AudioCard/        # Audio feature cards
 │   ├── ColorPicker/      # Product color selection
+│   │   ├── ColorPicker.jsx, ColorButtons.jsx
+│   │   └── ProductCarousel.jsx
 │   ├── Compare/          # Comparison components
 │   │   ├── ProductCompareCard.jsx
 │   │   └── icons.jsx     # 10 SVG icons
+│   ├── DreamlikeSound/   # Hero CTA section
+│   ├── HorizontalGallery/ # Scroll gallery
+│   │   ├── HorizontalGallery.jsx
+│   │   ├── GalleryTrack.jsx, GalleryPanel.jsx
 │   ├── Navbar/           # Navigation
-│   │   ├── Header.jsx    # Smart header
-│   │   ├── MobileMenu.jsx
-│   │   └── HeroContent.jsx  # Animated hero
-│   └── Footer/
-│       └── Footer.jsx
+│   │   ├── Header.jsx, MobileMenu.jsx
+│   │   ├── HeroSection.jsx, HeroContent.jsx
+│   └── Footer/Footer.jsx
 ├── data/
-│   ├── content.js        # Centralized content (NEW!)
+│   ├── content.js        # Centralized content
 │   └── productsData.js   # Product specs
+├── hooks/                # Custom React hooks
+│   ├── useBottomSheetAnimation.js
+│   ├── useCloseOnResize.js
+│   ├── useHeroTextAnimation.js
+│   └── useLockBodyScroll.js
 ├── pages/
-│   ├── Home.jsx
-│   ├── TechSpecs.jsx
-│   └── Compare.jsx
-└── App.js                # Router setup
+│   ├── Home.jsx, TechSpecs.jsx, Compare.jsx
+└── App.js                # Router setup (React Router 7)
 ```
 
 ---
@@ -161,18 +176,19 @@ src/
 ## 🛠️ Tech Stack
 
 **Frontend**:
-- React 18.x
-- React Router DOM 6.x
-- Tailwind CSS 3.x
-- GSAP 3.x
+- React 19.2.3 ✨
+- React Router DOM 7.11.0 ✨
+- Tailwind CSS 3.4.19
+- GSAP 3.14.2
 
 **Tools**:
-- Create React App
+- Create React App 5.0.1
 - ESLint
-- PostCSS
+- PostCSS 8.5.6
+- Sharp (Image Optimization)
 
 **Fonts**:
-- Poppins (Google Fonts)
+- Poppins (Google Fonts - Optimized Loading)
 
 ---
 
@@ -406,7 +422,8 @@ build/
 
 ---
 
-**Project Completed**: December 24, 2024  
+**Project Started**: December 2024  
+**Last Updated**: December 26, 2024  
 **Developer**: Raed (@Raed-div)  
 **Email**: raed.div@gmail.com
 
