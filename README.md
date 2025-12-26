@@ -19,6 +19,7 @@ Built with modern web technologies to ensure performance and scalability:
 - **Routing:** React Router DOM
 - **Build Tool:** Create React App / Webpack
 - **Package Manager:** npm
+- **PWA:** Progressive Web App
 
 ## 🏗️ Simple Architecture
 The project follows a clear component-based structure:
